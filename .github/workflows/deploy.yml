@@ -19,4 +19,4 @@ jobs:
       uses: snow-actions/line-notify@v1.0.0
       with:
         access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
-        message: 123
+        message: BOOK 更新了 https://naikyding.github.io/book/
