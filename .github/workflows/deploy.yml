@@ -18,5 +18,5 @@ jobs:
     - name: LINE Notify
       uses: snow-actions/line-notify@v1.0.0
       with:
-      access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
-      message: ${{ github.event.issue.title }}
+        access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
+        message: 123
