@@ -2,7 +2,7 @@ const { description } = require('../../package')
 
 module.exports = {
   // 網址底下/book/ 
-  base: '/book/',
+  // base: '/book/',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
