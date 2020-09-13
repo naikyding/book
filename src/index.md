@@ -2,7 +2,7 @@
 home: true
 heroImage: /img/frank.jpg
 tagline: 
-actionText: 快速開始 →
+actionText: 快速開始1 →
 actionLink: /guide/
 features:
 - title: Feature 1 Title
