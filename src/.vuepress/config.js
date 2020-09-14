@@ -63,23 +63,6 @@ module.exports = {
           children: ['', 'using-vue'],
         },
       ],
-      '/js/': [
-        {
-          title: '觀念',
-          collapsable: false,
-          children: ['', 'using-vue'],
-        },
-        {
-          title: '進階',
-          collapsable: false,
-          children: ['', 'using-vue'],
-        },
-        {
-          title: '技巧',
-          collapsable: false,
-          children: ['', 'using-vue'],
-        },
-      ],
     },
   },
 
