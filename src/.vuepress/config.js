@@ -1,7 +1,11 @@
 const { description } = require('../../package')
 
 module.exports = {
+  // 引用模版
+  theme: 'reco',
+
   base: '/book/',
+
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
@@ -43,6 +47,10 @@ module.exports = {
         link: '/js/',
       },
       {
+        text: 'GIT',
+        link: '/git/',
+      },
+      {
         text: 'Guide',
         link: '/guide/',
       },
@@ -61,6 +69,13 @@ module.exports = {
           title: 'Guide',
           collapsable: false, // 是否折疊
           children: ['', 'using-vue'],
+        },
+      ],
+      '/git/': [
+        {
+          title: 'GIT',
+          collapsable: true, // 是否折疊,
+          children: ['', 'info', 'setting'],
         },
       ],
     },
