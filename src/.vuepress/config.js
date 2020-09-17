@@ -51,6 +51,10 @@ module.exports = {
         link: '/git/',
       },
       {
+        text: 'DEPLOY',
+        link: '/deploy/'
+      },
+      {
         text: 'Guide',
         link: '/guide/',
       },
@@ -62,6 +66,7 @@ module.exports = {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org',
       },
+
     ],
     sidebar: {
       '/guide/': [
@@ -78,6 +83,13 @@ module.exports = {
           children: ['', 'info', 'setting', 'tag', 'reset'],
         },
       ],
+      '/deploy/': [
+        {
+          title: 'DEPLOY',
+          collapsable: true, // 是否折疊,
+          children: ['','githubPages'],
+        }
+      ]
     },
   },
 
