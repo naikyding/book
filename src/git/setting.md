@@ -1,4 +1,22 @@
-# 基本設定
+---
+title: SETTING && INSTALL
+date: 2020-09-16
+sidebar: 'auto'
+categories:
+  - git
+tags:
+  - setting
+  - install
+  - git
+---
+
+## **檢查目前 GIT 版本**
+
+確認是否有 git
+
+```sh
+git --version
+```
 
 ## install
 
@@ -7,18 +25,26 @@
 - **VSCODE TOOL**
   - [Git Graph 圖像顯示](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 
-## Setting
+## git 設定
 
-- **Personal 個人資料**
-  - 查詢 git 設定內容 `git config --list`
-  - 輸入作者姓名 `git config --global user.name "Naiky"`
-  - 輸入電子信箱 `git config --global user.email "74ding@gmail.com"`
+### 查詢 git config
 
-## local repo 本地資料庫
+- 查詢目前 git 所有設定
 
-- **檢查目前 GIT 版本**
-  確認是否有安裝
-
+  ```sh
+  git config --list
   ```
-  git --version
+
+### **Personal 個人資料**
+
+- 設定作者姓名
+
+  ```sh
+  git config --global user.name "Naiky"
+  ```
+
+- 設定電子信箱
+
+  ```sh
+  git config --global user.email "74ding@gmail.com"
   ```
