@@ -75,9 +75,9 @@ module.exports = {
 
       '/js/': [
         {
-          title: 'GIT',
+          title: 'Javascript',
           collapsable: true, // 是否折疊,
-          children: ['', 'string', 'number_math'],
+          children: ['', 'string', 'number_math', 'date', 'for', 'if'],
         },
       ],
 
