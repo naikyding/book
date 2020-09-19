@@ -1,3 +1,10 @@
 {
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "prettier.trailingComma": "es5", // 尾隨逗號
+  "prettier.tabWidth": 2, // 縮排空幾格
+  "prettier.printWidth": 120, // 行寬
+  "prettier.semi": false, // 結尾是否使用分號
+  "prettier.singleQuote": true, // 使用單引號
+  "prettier.requireConfig": false, // 使用當前目錄config檔來格式化
+  "editor.formatOnSave": true, // 儲存時格式化
 }
