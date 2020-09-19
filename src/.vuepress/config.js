@@ -23,10 +23,7 @@ module.exports = {
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    [
-      'meta',
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
-    ],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
   ],
 
   /**
@@ -52,7 +49,7 @@ module.exports = {
       },
       {
         text: 'DEPLOY',
-        link: '/deploy/'
+        link: '/deploy/',
       },
       {
         text: 'Guide',
@@ -66,7 +63,6 @@ module.exports = {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org',
       },
-
     ],
     sidebar: {
       '/guide/': [
@@ -76,6 +72,15 @@ module.exports = {
           children: ['', 'using-vue'],
         },
       ],
+
+      '/js/': [
+        {
+          title: 'GIT',
+          collapsable: true, // 是否折疊,
+          children: ['', 'string'],
+        },
+      ],
+
       '/git/': [
         {
           title: 'GIT',
@@ -87,9 +92,9 @@ module.exports = {
         {
           title: 'DEPLOY',
           collapsable: true, // 是否折疊,
-          children: ['','githubPages'],
-        }
-      ]
+          children: ['', 'githubPages'],
+        },
+      ],
     },
   },
 
