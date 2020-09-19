@@ -77,7 +77,7 @@ module.exports = {
         {
           title: 'GIT',
           collapsable: true, // 是否折疊,
-          children: ['', 'string'],
+          children: ['', 'string', 'number_math'],
         },
       ],
 
