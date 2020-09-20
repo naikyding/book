@@ -15,6 +15,7 @@ tags:
 ---
 
 # 設定基本的 router
+
 在 `.vuepress/config.js` 設置正確的 base。
 
 如果你打算发布到 https://`USERNAME`.github.io/，则可以省略这一步，因为 base 默认即是 "/"
@@ -63,6 +64,7 @@ git commit -m 'deployed'
 ```
 
 ## 執行指令
+
 當想執行 sh 腳本時，輸入以下指令
 
 ```sh
