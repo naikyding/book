@@ -26,6 +26,40 @@ tags:
 | .find()         | 找到陣列中**第一個**符合條件的項目 | **array.find(** `(item) => {item.name === 'nike'}` **)**                | 方法會回傳第一個滿足所提供之測試函式的元素值。                             | 符合條件的項目                   |
 | Object.keys()   |        陣列所有 index 索引         | **Object.keys(** `array` **)**                                          | 找出物件/陣列的所有索引值                                                  | 陣列(索引放入陣列回)             |
 
+```js
+// .splice() //
+var array = [1, 2, 3, 4 ];
+array.splice(1,2);  // 從索引 1 刪除 2 個數值
+<- [2, 3] // 回傳被刪除的數值
+array // [1, 4]
+
+var lottery = [1, 2, 3, 4];
+lottery.splice(2, 1, 'abc'); // 從索引 2 刪除 1 個數值, 同時新增 'abc'
+<- [3] // 回傳被刪除
+lottery // [1, 2, "abc", 4]
+```
+
+```js
+// .indexOf() //
+var lottery = [1, 2, 3, 4]
+var index = lottery.indexOf(2)
+console.log(index) // 1
+```
+
+```js
+// .filter() //
+var array = [1, 2, 3, 4]
+const found = array.filter((val) => val > 2)
+;(found) => [3, 4]
+```
+
+```js
+// .find() //
+var array = [1, 2, 3, 4]
+const found = array.filter((val) => val > 2)
+;(found) => 3
+```
+
 ## 遍歷陣列 loop
 
 | 方法        | 簡述           | 範例                                                               | 說明                                                           |

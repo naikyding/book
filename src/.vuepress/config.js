@@ -30,6 +30,7 @@ module.exports = {
   base: '/book/',
 
   themeConfig: {
+    logo: '/img/profile.png',
     type: 'blog',
     authorAvatar: '/img/profile.png',
     friendLink: [
@@ -50,6 +51,10 @@ module.exports = {
     // 導覽列
     nav: [
       {
+        text: 'VUE',
+        link: '/vue/',
+      },
+      {
         text: 'JS',
         link: '/js/',
       },
@@ -60,6 +65,12 @@ module.exports = {
       {
         text: 'DEPLOY',
         link: '/deploy/',
+        icon: 'reco-up',
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/naikyding',
+        icon: 'reco-github',
       },
     ],
   },
