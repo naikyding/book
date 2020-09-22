@@ -88,6 +88,7 @@ module.exports = {
             'for',
             'if',
             'operator',
+            'array',
           ],
         },
       ],
