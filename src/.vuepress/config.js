@@ -1,15 +1,10 @@
 const { description } = require('../../package')
 
 module.exports = {
-  // 引用模版
-  theme: 'reco',
-
-  base: '/book/',
-
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'NIKEDIN DOCUMENT',
+  title: 'NIKEDIN',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -29,17 +24,29 @@ module.exports = {
     ],
   ],
 
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
+  // 引用模版
+  theme: 'reco',
+
+  base: '/book/',
+
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
+    type: 'blog',
+    authorAvatar: '/img/profile.png',
+    friendLink: [
+      {
+        title: 'vuepress-theme-reco',
+        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
+        logo: 'https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png',
+        link: 'https://vuepress-theme-reco.recoluan.com',
+      },
+      {
+        title: '午后南杂',
+        desc: 'Enjoy when you can, and endure when you must.',
+        email: 'recoluan@qq.com',
+        link: 'https://www.recoluan.com',
+      },
+      // ...
+    ],
     // 導覽列
     nav: [
       {
@@ -54,61 +61,88 @@ module.exports = {
         text: 'DEPLOY',
         link: '/deploy/',
       },
-      {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/',
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org',
-      },
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false, // 是否折疊
-          children: ['', 'using-vue'],
-        },
-      ],
-
-      '/js/': [
-        {
-          title: 'Javascript',
-          collapsable: true, // 是否折疊,
-          children: [
-            '',
-            'string',
-            'number_math',
-            'date',
-            'for',
-            'if',
-            'operator',
-            'array',
-          ],
-        },
-      ],
-
-      '/git/': [
-        {
-          title: 'GIT',
-          collapsable: true, // 是否折疊,
-          children: ['', 'info', 'setting', 'tag', 'reset'],
-        },
-      ],
-      '/deploy/': [
-        {
-          title: 'DEPLOY',
-          collapsable: true, // 是否折疊,
-          children: ['', 'githubPages'],
-        },
-      ],
-    },
   },
+  /**
+   * Theme configuration, here is the default theme configuration for VuePress.
+   *
+   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
+   */
+  // themeConfig: {
+  //   repo: '',
+  //   editLinks: false,
+  //   docsDir: '',
+  //   editLinkText: '',
+  //   lastUpdated: false,
+  //   // 導覽列
+  //   nav: [
+  //     {
+  //       text: 'JS',
+  //       link: '/js/',
+  //     },
+  //     {
+  //       text: 'GIT',
+  //       link: '/git/',
+  //     },
+  //     {
+  //       text: 'DEPLOY',
+  //       link: '/deploy/',
+  //     },
+  //     {
+  //       text: 'Guide',
+  //       link: '/guide/',
+  //     },
+  //     {
+  //       text: 'Config',
+  //       link: '/config/',
+  //     },
+  //     {
+  //       text: 'VuePress',
+  //       link: 'https://v1.vuepress.vuejs.org',
+  //     },
+  //   ],
+  //   sidebar: {
+  //     '/guide/': [
+  //       {
+  //         title: 'Guide',
+  //         collapsable: false, // 是否折疊
+  //         children: ['', 'using-vue'],
+  //       },
+  //     ],
+
+  //     '/js/': [
+  //       {
+  //         title: 'Javascript',
+  //         collapsable: true, // 是否折疊,
+  //         children: [
+  //           '',
+  //           'string',
+  //           'number_math',
+  //           'date',
+  //           'for',
+  //           'if',
+  //           'operator',
+  //           'array',
+  //         ],
+  //       },
+  //     ],
+
+  //     '/git/': [
+  //       {
+  //         title: 'GIT',
+  //         collapsable: true, // 是否折疊,
+  //         children: ['', 'info', 'setting', 'tag', 'reset'],
+  //       },
+  //     ],
+  //     '/deploy/': [
+  //       {
+  //         title: 'DEPLOY',
+  //         collapsable: true, // 是否折疊,
+  //         children: ['', 'githubPages'],
+  //       },
+  //     ],
+  //   },
+  // },
 
   // themeConfig: {
   //   // 博客配置
