@@ -1,6 +1,6 @@
 ---
 title: Slot 組件插槽大全
-data: 2020-09-22
+date: 2020-09-22
 categories:
   - vue
 tags:
