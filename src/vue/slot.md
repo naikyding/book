@@ -1,5 +1,5 @@
 ---
-title: Slot 組件插槽大全
+title: Slot 組件插槽
 date: 2020-09-22
 categories:
   - vue
