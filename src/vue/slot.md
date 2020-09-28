@@ -1,6 +1,7 @@
 ---
 title: Slot 組件插槽
 date: 2020-09-22
+sidebar: 'auto'
 categories:
   - vue
 tags:
