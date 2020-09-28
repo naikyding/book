@@ -218,6 +218,7 @@ Props 的接收驗証，是在`組件`被 created 的時候! 所以此時的 `da
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
+
 假設組件的根標籤只有一個`<input type="checkbox">`，當父層在組件上定義屬性為 `checked` ，這個屬性將傳入 根標籤!
 
 **組件**
@@ -231,17 +232,76 @@ Props 的接收驗証，是在`組件`被 created 的時候! 所以此時的 `da
 
 **父層**
 
+```vue
+<Input checked />
+```
+
+### class 繼承
+
+**父層** 寫入組件的 `class` 屬性，會直接加入組件的根標籤 `class`
+:::warning 注意
+如果組件本身也有`class`，那父層的`class`會被加入在組件 class 的後面!
+:::
+
 <iframe src="https://codesandbox.io/embed/crimson-cdn-hkupy?fontsize=14&hidenavigation=1&theme=dark"
      style="width:100%; height:200px; border:0; border-radius: 4px; overflow:hidden;"
      title="crimson-cdn-hkupy"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
+
+**父層**
+
 ```vue
-<Input checked />
+<ComponentClass class="AAA" />
 ```
 
-### class 繼承
+**組件**
+
+```vue
+<template>
+  <div class="BBB" />
+</template>
+```
+
+**渲染後**
+
+```vue
+<div class="BBB AAA" />
+```
+
+### 禁止繼承
+
+如果你不希望组件的根元素继承 attribute，你可以在组件的选项中设置 `inheritAttrs: false`。例如：
+
+```js {2}
+Vue.component('my-component', {
+  inheritAttrs: false,
+  // ...
+})
+```
+
+### 指定繼承
+
+通常禁止繼承，是為了可以指定某一個標籤來繼承指定的屬性。
+通常兩者會搭配使用。
+
+```js {2,8}
+Vue.component('base-input', {
+  inheritAttrs: false,
+  props: ['label', 'value'],
+  template: `
+    <label>
+      {{ label }}
+      <input
+        v-bind="$attrs"
+        v-bind:value="value"
+        v-on:input="$emit('input', $event.target.value)"
+      >
+    </label>
+  `,
+})
+```
 
 # component 組件動態切換
 
