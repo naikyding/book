@@ -73,6 +73,8 @@ module.exports = {
         icon: 'reco-github',
       },
     ],
+
+    lastUpdated: 'Last Updated', // string | boolean
   },
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
