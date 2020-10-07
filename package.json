@@ -16,5 +16,8 @@
   "devDependencies": {
     "vuepress": "^1.5.3",
     "vuepress-theme-reco": "^1.5.5"
+  },
+  "dependencies": {
+    "moment": "^2.29.1"
   }
 }

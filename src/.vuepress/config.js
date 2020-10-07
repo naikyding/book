@@ -178,5 +178,14 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     '@vuepress/last-updated',
+    {
+      // 將時間調整為正確的，設定方式 https://vuepress.vuejs.org/plugin/official/plugin-last-updated.html#options
+      transformer: (timestamp, lang) => {
+        // Don't forget to install moment yourself
+        const moment = require('moment')
+        moment.locale(lang)
+        return moment(timestamp).fromNow()
+      },
+    },
   ],
 }
