@@ -117,7 +117,7 @@ const componentD = {
 
 可以在組件的 **屬性** 給予一個值，當作要傳送到子組件的資料!
 :::danger 注意
-資訊屬性的命名規則，請使用 kebab-case 不要使用 camelcase(駱峰)
+`props`名稱的命名規則，請使用 kebab-case(烤肉串) 不要使用 camelcase(駱峰)
 :::
 
 #### 傳送方式
