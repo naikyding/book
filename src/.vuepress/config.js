@@ -63,6 +63,10 @@ module.exports = {
         link: '/git/',
       },
       {
+        text: 'API',
+        link: '/api/',
+      },
+      {
         text: 'DEPLOY',
         link: '/deploy/',
         icon: 'reco-up',
