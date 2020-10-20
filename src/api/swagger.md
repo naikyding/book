@@ -11,7 +11,26 @@ tags:
   - openApi2.0
 ---
 
+[Swagger](https://swagger.io/) 是一個工具讓你的後端 API 接口可以更視覺化被呈現，透過 Swagger UI 工具可以產生 HTML && CSS && Javascript 產生網頁版的 API 文件。當然 Swagger 可不只是只能產生 API 文件，它也可用來做測試 API 接口，或是也可以搭配 Postman 使用等…
+
+![swaggerEdit](/img/swagger_edit.png)
+
+## VSCODE 環境
+
+需要的套件：
+
+- [json2yaml](https://marketplace.visualstudio.com/items?itemName=tuxtina.json2yaml) YAML -> JSON 相互格式轉換工具
+- [Swagger Viewer](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer) 在 vscode 可以即時預覽 swagger2 openApi 文件
+- [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi) 在 vscode 可以即時預覽 swagger2 openApi 文件；套件也可以幫你快速建立 openapi 文件套版
+- [Swagger Snippets](https://marketplace.visualstudio.com/items?itemName=adisreyaj.swagger-snippets) swagger 文件，的提示字，可用 `sw` 開頭來打關鍵字
+
 ## 編寫 api 文件
+
+一個良好的編寫方式或流程，可以加快且有效率的提升你的 api 件。
+
+- 文件說明 info
+- 定義資料格式 definitions
+- api 路由定義與方法
 
 ```yaml
 swagger: '2.0'
