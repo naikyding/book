@@ -14,7 +14,7 @@ tags:
 
 [Swagger ui](https://swagger.io/tools/swagger-ui/) 是一個工具讓你的後端 API 接口可以更視覺化被呈現，透過 Swagger UI 工具可以產生 HTML && CSS && Javascript 產生網頁版的 API 靜態文件。
 
-![swaggerEdit](/img/swaggerui.png)
+<img :src="$withBase('/img/swaggerui.png')" alt="swaggerUi">
 
 ## 建置專案內容
 
