@@ -32,7 +32,76 @@ const router = new VueRouter({
 path 當中 `/` 所代表的就是`根入口`，所以子層不可加 `/`
 :::
 
-## 動態路由
+## 巢狀路由
+
+當基礎路由內部，還需要一層路由時，這時就可以使用巢狀路由。
+
+```
+/user/foo/profile                     /user/foo/posts
++------------------+                  +-----------------+
+| User             |                  | User            |
+| +--------------+ |                  | +-------------+ |
+| | Profile      | |  +------------>  | | Posts       | |
+| |              | |                  | |             | |
+| +--------------+ |                  | +-------------+ |
++------------------+                  +-----------------+
+```
+
+### 方式
+
+- 在父層再加上一個 `<router-view></router-view>`
+- 定義子層路由
+  子層路徑，就不用再加上 `/`
+
+  ```js
+  const routes = [
+    {
+      path: '/',
+      name: 'index'
+      component: ()=>import('@/views/...')
+    },
+    {
+      path: '/user/:id',
+      component: User,
+      children: [
+            {
+              // 当 /user/:id/profile 匹配成功，
+              // UserProfile 会被渲染在 User 的 <router-view> 中
+              path: 'profile',
+              component: UserProfile
+            },
+            {
+              // 当 /user/:id/posts 匹配成功
+              // UserPosts 会被渲染在 User 的 <router-view> 中
+              path: 'posts',
+              component: UserPosts
+            }
+          ]
+    }
+  ]
+  ```
+
+  ### 加入子層後的首頁定義
+
+  但這時父層的 `path: '/user/:id'` 會是空頁，如果你想要在父層的首頁加上頁面，可以使用 `path: ''`：
+
+  ```js
+  routes: [
+    {
+      path: '/user/:id',
+      component: User,
+      children: [
+        // 当 /user/:id 匹配成功，
+        // UserHome 会被渲染在 User 的 <router-view> 中
+        { path: '', component: UserHome },
+
+        // ...其他子路由
+      ],
+    },
+  ]
+  ```
+
+## 動態匹配路由
 
 當你希望路徑中，可以依名稱`動態變更`內容時，可以使用這個方式。
 
@@ -98,3 +167,34 @@ const User = {
 ```
 
 :::
+
+## 捕獲所有路徑
+
+想要匹配**所有**的路徑，可以使用 `*`
+
+```js
+{
+  // 会匹配所有路径
+  path: '*'
+}
+{
+  // 会匹配以 `/user-` 开头的任意路径
+  path: '/user-*'
+}
+```
+
+ 當通過 `*` 捕獲路徑時，在 `$route.params` 會出多一個 `pathMatch` 參數，可以來顯示目前捕獲的路徑名稱。
+
+```js
+// 當路徑為 { path: '/user-*' }
+this.$router.push('/user-admin')
+this.$route.params.pathMatch // 'admin'
+
+// 當路徑為 { path: '*' }
+this.$router.push('/non-existing')
+this.$route.params.pathMatch // '/non-existing'
+```
+
+## 路徑匹配的優先權
+
+有時候，同一個路徑可以匹配多個路由，此時，匹配的優先級就按照路由的定義順序：誰先定義的，誰的優先級就最高。
