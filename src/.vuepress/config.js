@@ -59,6 +59,10 @@ module.exports = {
         link: '/js/',
       },
       {
+        text: 'NPM',
+        link: '/npm/',
+      },
+      {
         text: 'GIT',
         link: '/git/',
       },
