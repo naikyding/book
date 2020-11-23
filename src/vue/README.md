@@ -2,10 +2,11 @@
 title: INDEX
 ---
 
-| Components                        | Router                           |
-| --------------------------------- | -------------------------------- |
-| [Component 組件](./component.md)  | [引入與掛載](./router.md)        |
-| [Slot 插槽](./slot.md)            | [路由定義](./router-routes.md)   |
-| [Custom Events](./customEvent.md) | [路由導航](./router_nav.md)      |
-| --                                | [多重視圖](./router_mutiView.md) |
-| --                                | [組件傳參](./props.md)           |
+| Components                             | Router                           |
+| -------------------------------------- | -------------------------------- |
+| [組件註冊](./component.md)             | [引入與掛載](./router.md)        |
+| [Props 資料傳遞](./component_props.md) | [路由定義](./router-routes.md)   |
+| [屬性繼承](./component_attributes)     | --                               |
+| [Custom Events](./customEvent.md)      | [路由導航](./router_nav.md)      |
+| [Slot 插槽](./slot.md)                 | [多重視圖](./router_mutiView.md) |
+| [Custom Events](./customEvent.md)      | [組件傳參](./props.md)           |
