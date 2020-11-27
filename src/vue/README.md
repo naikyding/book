@@ -10,3 +10,5 @@ title: INDEX
 | [Custom Events](./customEvent.md)      | [路由導航](./router_nav.md)       |
 | [Slot 插槽](./slot.md)                 | [多重視圖](./router_mutiView.md)  |
 | [Custom Events](./customEvent.md)      | [組件傳參](./props.md)            |
+| --                                     | [導航守衛](./router-guards.md)    |
+| --                                     | --                                |
