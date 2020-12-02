@@ -83,7 +83,22 @@ Vue.createApp(App).mount('#app')
 </script>
 ```
 
-:::danger
+### setup 內操作 computed
+
+:::danger 注意
+在 setup 裡，使用 computed 產生的`參數`時，還是需要使用 `.value` 來提取內容。
+**不然會是一個被包裝的物件!!(如下)**
+<img :src="$withBase('/img/console_computed.png')" alt="swaggerUi">
+
+```js {4}
+const filterList = computed(() => listArr.filter((item) => item.money > 500))
+
+const BoxHeight = computed(() => {
+  return isOpen.value ? `${filterList.value.length * 40}px` : '0px'
+})
+```
+
+:::
 
 ## methods 與 compouted 選擇?
 
@@ -92,4 +107,3 @@ Vue.createApp(App).mount('#app')
 - computed (不可傳入參數) 會緩存**計算**後的資料，只要資料不變動，就不會再重新執行計算!
 
 - methods (可以傳入參數使用) 不會緩存，每次都要重新執行
-  :::
