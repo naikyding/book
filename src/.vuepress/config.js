@@ -55,6 +55,10 @@ module.exports = {
         link: '/vue/',
       },
       {
+        text: 'VUE3',
+        link: '/vue3/',
+      },
+      {
         text: 'JS',
         link: '/js/',
       },

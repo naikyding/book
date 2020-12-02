@@ -67,7 +67,7 @@ console.log(newData) // [1, 2, 3]
 
 ### 複製物件
 
-(類 **淺拷貝**，只有拷貝一層)
+(類 **淺拷貝**，只有拷貝一層) **傳值**
 
 ```js
 let user = { id: 1, name: 'naiky' }
@@ -86,7 +86,7 @@ let newUser = { ...user }
 
 newUser.name.first = 'NIKI'
 
-// 原物件第二層不會被改變!!
+// 第一層會 傳值，第二層是值址 (第二層依舊會被改變)
 console.log(user.name.first) // NIKI
 console.log(newUser.name.first) // NIKI
 ```
