@@ -6,7 +6,7 @@ categories:
   - vue
   - vue3
 tags:
-	- ref
+  - ref
   - reactive
 ---
 

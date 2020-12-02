@@ -5,6 +5,8 @@ sidebar: 'auto'
 categories:
   - js
 tags:
+  - es6
+  - module
 ---
 
 ## 模組系統

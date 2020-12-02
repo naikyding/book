@@ -92,13 +92,13 @@ router.go(-100)
 router.go(100)
 ```
 
-## routes 轉址 / 重定向
+## routes 轉址 / 重定向 `redirect`
 
 通過 `routes` 配置來完成重定向，會將 URL `/a` 改成 `/b`
 
 - 將 `/a` 轉址 `/b`
 
-  ```js
+  ```js {2}
   const router = new VueRouter({
     routes: [{ path: '/a', redirect: '/b' }],
   })
@@ -128,7 +128,7 @@ router.go(100)
   })
   ```
 
-## router 路徑鏡射 / 別名
+## routes 路徑鏡射 / 別名 `alias`
 
 這個操作 url 路徑不會變更，不同於 `redirect` 轉址
 
