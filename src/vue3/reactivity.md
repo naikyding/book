@@ -10,7 +10,14 @@ tags:
   - methods
 ---
 
-setup 是用來取代原本 在 vue 實體內的功能
+## setup
+
+`setup` 是 `Composition Api` 的入口，也算是一個 hook，
+
+- `setup` 出現的時機 (在 created 之前)：
+  - vue 實體創立
+  - 初始化 `props`
+  - 調用 `setup` ✅
 
 ## 🧰 methods
 
@@ -264,7 +271,7 @@ watch(
 
 - ### 監聽方式
 
-  只要被放入執行的項目的**資料**，就會被加入 **追蹤監聽**，一旦內部有資料被更新，就會馬上執行內部的項目。
+  只要被放入執行的項目的**資料**，就會被加入 **追蹤監聽**，當內部有任何一個資料被更新，就會馬上執行內部的項目。
   :::tip
   建立監聽時，載入頁面同時也被執行 !!
   :::
@@ -285,7 +292,10 @@ watch(
 
 - ### 停止監聽
 
-  ```js {4,6}
+  當 `watchEffect` 這個方法，在 `setup` 或 `其它生命周期`時，
+  將 `watchEffect` 用變數接下，想停止時 **執行** 這個`變數`
+
+  ```js {5,7}
   setup() {
       const count = ref(0)
 
@@ -306,3 +316,50 @@ watch(
     },
   }
   ```
+
+- ### 停止監聽執行中的**非同步**
+
+  有些時候，你停止了監聽的函式運作，但函式裡如果有**非同步函式**正在運行，還是會被回傳，這時就需要清掉 **非同步的函式運行**
+
+  **如果 `非同步函式` 是一個變數**
+
+  ```js
+  watchEffect((onInvalidate) => {
+    const token = performAsyncOperation(id.value)
+    onInvalidate(() => {
+      // id has changed or watcher is stopped.
+      // invalidate previously pending async operation
+      token.cancel()
+    })
+  })
+  ```
+
+  **如果使用 `async` `await`**
+
+  要在 `await` 之前，先註冊清除的方法。
+
+  ```js
+  const data = ref(null)
+  watchEffect(async onInvalidate => {
+  onInvalidate(() => {...}) // we register cleanup function before Promise resolves
+  data.value = await fetchData(props.id)
+  })
+  ```
+
+  [參考](https://v3.vuejs.org/guide/reactivity-computed-watchers.html#side-effect-invalidation)
+
+## 🆚 watch VS watchEffect
+
+| -    | watch                  | watchEffect           |
+| ---- | ---------------------- | --------------------- |
+| 說明 | 被動監聽               | 主動監聽              |
+| O    | 可以拿到`參數` 新/舊值 | 可以停止監聽          |
+| x    | 無法停止監聽           | 無法取`參數`得新/舊值 |
+
+### watch 轉 watchEffect
+
+主動監聽方式 => `{immediate: true}`
+
+```js
+watch(data, () => {}, { immediate: true })
+```
