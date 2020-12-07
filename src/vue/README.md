@@ -12,4 +12,4 @@ title: INDEX
 | [Custom Events](./customEvent.md)      | [組件傳參](./props.md)                |
 | [屬性綁定](./attr.md)                  | [導航守衛 Guards](./router-guards.md) |
 | --                                     | [路由信息 meta](./router-meta)        |
-| --                                     | [滾動至頂](./router-scrolltotop.md)   |
+| [v-model](./vmodel.md)                 | [滾動至頂](./router-scrolltotop.md)   |
