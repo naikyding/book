@@ -15,9 +15,43 @@ tags:
 `setup` 是 `Composition Api` 的入口，也算是一個 hook，
 
 - `setup` 出現的時機 (在 created 之前)：
+
   - vue 實體創立
   - 初始化 `props`
   - 調用 `setup` ✅
+
+- ### props
+
+  `setup` 提供第一個參數，就是由父層傳進的 `props`
+  可以藉由此讀取到 `props` 的值
+
+  ```js
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  },
+  setup(props, context) {
+  console.log(props.title)
+  }
+  ```
+
+- ### context
+  `setup` 提供第二個參數為 `context` 為調問 vue 實例的地方，可以提供 原本 this 的功能
+  - emit
+  - attrs
+  - slot
+    像最常使用到的 `$emit` 就是變為 `context.emit`
+  ```js
+  setup(props, context) {
+    function setData() {
+      context.emit('set-data', newData)
+    }
+  }
+  ```
+
+---
 
 ## 🧰 methods
 

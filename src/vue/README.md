@@ -11,5 +11,5 @@ title: INDEX
 | [Slot 插槽](./slot.md)                 | [多重視圖](./router_mutiView.md)      |
 | [Custom Events](./customEvent.md)      | [組件傳參](./props.md)                |
 | [屬性綁定](./attr.md)                  | [導航守衛 Guards](./router-guards.md) |
-| --                                     | [路由信息 meta](./router-meta)        |
+| [轉場](./transition.md)                | [路由信息 meta](./router-meta)        |
 | [v-model](./vmodel.md)                 | [滾動至頂](./router-scrolltotop.md)   |
