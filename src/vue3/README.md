@@ -9,3 +9,4 @@ title: INDEX
 | [ref 元系綁定](./ref.md)    | [readonly](./readonly.md)                  | --  |
 | [自定指令 ](./directive.md) | [Reactivity 響應功能](./reactivity.md)     | --  |
 | --                          | [Router](./router.md)                      | --  |
+| --                          | [Vuex](./vuex.md)                          | --  |
