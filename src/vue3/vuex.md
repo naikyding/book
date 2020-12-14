@@ -9,3 +9,8 @@ tags:
   - vuex
   - store
 ---
+
+## setup 使用
+
+```js
+```
