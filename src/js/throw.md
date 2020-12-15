@@ -9,6 +9,8 @@ tags:
   - catch
 ---
 
+[MDN 參考](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
 ## throw 例外的陳述定義
 
 您可以拋出任何運算式，而不僅僅是特定類型的運算式。以下的程式碼會拋出一些不同類型的例外。
