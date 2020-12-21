@@ -7,3 +7,4 @@ title: INDEX
 | [專案設置](./setting.md)       | [生命週期](./lifecycle.md) | [取得資料](./async.md) | [生命週期]() |
 | [Router](./router.md)          | --                         | --                     | --           |
 | [loading 載入中](./loading.md) | --                         | --                     | --           |
+| [錯誤頁面](./error.md)         | --                         | --                     | --           |

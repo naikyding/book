@@ -104,7 +104,8 @@ this.$nuxt.$loading.finish() // stop
   要有基本的 `methods` 才會被 `nuxt` 觸發
   :::
 
-- 掛載入 nuxt
+- ### 掛載入 nuxt
+
   `nuxt.config.js`
 
   ```js
