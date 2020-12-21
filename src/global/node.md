@@ -31,8 +31,16 @@ tags:
 
   **安裝**
 
+  - 一般安裝
+
   ```
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+  ```
+
+  - zsh 安裝
+
+  ```
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
   ```
 
   :::danger

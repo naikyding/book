@@ -63,6 +63,10 @@ module.exports = {
         link: '/js/',
       },
       {
+        text: 'NUXT',
+        link: '/nuxt/',
+      },
+      {
         text: 'NPM',
         link: '/npm/',
       },

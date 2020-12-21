@@ -35,7 +35,7 @@ setup() {
   const textInput = ref(null)
 
   onMounted(()=> {
-    console.log(textInput.value) // <input type="text" />
+    console.log(textInput.value) // <input type="text" /> 會指向這個 dom 實例
   })
 
   return {
