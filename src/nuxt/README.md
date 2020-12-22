@@ -8,3 +8,4 @@ title: INDEX
 | [Router](./router.md)          | --                         | --                     | --           |
 | [loading 載入中](./loading.md) | --                         | --                     | --           |
 | [錯誤頁面](./error.md)         | --                         | --                     | --           |
+| [plugins 套件](./plugins.md)   | --                         | --                     | --           |
