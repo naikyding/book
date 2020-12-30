@@ -10,3 +10,4 @@ title: INDEX
 | [錯誤頁面](./error.md)              | --                         | --                     | --           |
 | [plugins 套件](./plugins.md)        | --                         | --                     | --           |
 | [plugins 實例](./pluginsExample.md) | --                         | --                     | --           |
+| [store](./store.md)                 | --                         | --                     | --           |
