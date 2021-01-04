@@ -45,6 +45,17 @@ tags:
   }
   ```
 
+- **拆分檔案**方式
+  也可以將 `store` 各項目給拆出來另外成立檔案。
+
+  ```
+  ├─ store
+  │   ├─ state.js
+  │   ├─ mutations.js
+  │   ├─ actions.js
+  │   └─ getters.js
+  ```
+
   :::danger 注意
   每個 `state` 都應該是 `function` 的方式回傳，這是避免被其它實例(server 端)使用時給**汙染**導致互相影響。
   :::
@@ -61,10 +72,13 @@ tags:
   </template>
   ```
 
-  ```js
+  ```js {3-5,7-9}
   <script>
   export default {
-    asyncData(context) {},
+    asyncData({store}) {
+       console.log(store.state.num);
+    },
+
     mounted() {
       console.log(this.$store.state.num);
     }
@@ -98,6 +112,18 @@ tags:
       commit('SET_STATUS')
     },
   }
+  ```
+
+- **拆分檔案方式**
+  也可以定義一個模組的資料夾，在裡面拆分各項目
+
+  ```
+  ├─ store
+  │   └─ user
+  │       ├─ state.js
+  │       ├─ mutations.js
+  │       ├─ actions.js
+  │       └─ getters.js
   ```
 
 - `.vue` 使用
