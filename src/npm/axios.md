@@ -10,10 +10,20 @@ tags:
   - interceptors
 ---
 
+## 常用請求方法
+
+```js
+axios.get(url[, config])
+axios.delete(url[, config])
+axios.post(url[, data[, config]])
+axios.put(url[, data[, config]])
+axios.patch(url[, data[, config]])
+```
+
 ## 創造一個實例
 
 可以針對不同的 api 去創造，屬於它自已的請求實例，之後只要訪問這隻就可以了，
-也可以針對不同的**實例** 來做後續的動作或 `interceptor`
+也可以針對不同的**實例** 來做**不同的`config`** 或 **攔截`interceptor`**
 
 ```js
 // https://vue-lessons-api.herokuapp.com/photo/list 以此為例
@@ -24,6 +34,31 @@ const photoRequest = axios.create({
 })
 
 export const getPhotoList = () => photoRequest.get('/photo/list')
+```
+
+## 設置配置檔
+
+你可以設定**默認**的配置檔
+
+### 全域默認
+
+```js
+axios.defaults.baseURL = 'https://api.example.com'
+axios.defaults.headers.common['Authorization'] = AUTH_TOKEN
+axios.defaults.headers.post['Content-Type'] =
+  'application/x-www-form-urlencoded'
+```
+
+### 客製化配置檔
+
+```js
+// Set config defaults when creating the instance
+const instance = axios.create({
+  baseURL: 'https://api.example.com',
+})
+
+// Alter defaults after instance has been created
+instance.defaults.headers.common['Authorization'] = AUTH_TOKEN
 ```
 
 ## 請求攔截器
