@@ -11,3 +11,4 @@ title: INDEX
 | [plugins 套件](./plugins.md)        | --                         | --                     | --           |
 | [plugins 實例](./pluginsExample.md) | --                         | --                     | --           |
 | [store](./store.md)                 | --                         | --                     | --           |
+| [proxy](./proxy.md)                 | --                         | --                     | --           |
