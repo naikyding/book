@@ -82,7 +82,17 @@ export default new Vuex.Store({
 
 - ### mutations
 
-  ```js
+  `mutations` 函式，第一個參數為 `state`: 狀態資料、`payload`： 為帶進來的資料。
+
+  ```js {2}
+  mutations: {
+    increment (state, payload) {
+      state.count += payload.amount
+    }
+  }
+  ```
+
+  ```js {5,11,13}
   // store/index.js
   actions: {  // 與 api 的互動，可以是非同步操作，提交 mutations 改變數據狀態(不可直接改)
       async get_data(context){ // 第一個參數為 vuex
@@ -109,6 +119,20 @@ export default new Vuex.Store({
 
 - ### actions
 
+  `actions` 函式，第一個參數為 `context` 是 `store` 的實例、第二個參數為 `payload` 是傳遞的資料。
+  :::tip
+  任何操作都在這個實例裡面。
+  所以你也可以在 `context` 解構出 `{ commit }`，來打 `mutations`
+  :::
+
+  ```js
+    actions: {
+    increment (context) {
+      context.commit('increment')
+    }
+  }
+  ```
+
   ```js
   // .vue
   this.$store.dispatch('get_data')
@@ -127,7 +151,28 @@ export default new Vuex.Store({
 
 當專案起來越大的時候，`store` 單一單案會過於腫大、也不好分類；這時你可以使用 `模組` 來為你的 `store` 分類。
 
+只要遵守以上的規則，你可以使用任何你想要的方式，如果 `store` 太大，只需要獎 `actions` 、 `mutations` 如 `getters` 分割到單獨的文件。
+
+對於大型的專案，希望你可以把 `vuex` 相關的代碼分割到模塊中，下面是範例：
+
 ```js
+├── index.html
+├── main.js
+├── api
+│   └── ... # 抽取出API请求
+├── components
+│   ├── App.vue
+│   └── ...
+└── store
+    ├── index.js          # 我们组装模块并导出 store 的地方
+    ├── actions.js        # 根级别的 action
+    ├── mutations.js      # 根级别的 mutation
+    └── modules
+        ├── cart.js       # 购物车模块
+        └── products.js   # 产品模块
+```
+
+```js {15-18}
 const moduleA = {
   state: () => ({ ... }),
   mutations: { ... },
@@ -151,6 +196,10 @@ const store = new Vuex.Store({
 store.state.a // -> `moduleA`'s state
 store.state.b // -> `moduleB`'s state
 ```
+
+:::tip
+模組化後，要記得從 `store/index.js` 掛入`modules`，才會生效。
+:::
 
 ### actions 操作
 
