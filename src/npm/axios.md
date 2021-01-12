@@ -8,6 +8,8 @@ tags:
   - create
   - axios
   - interceptors
+  - token
+  - login
 ---
 
 ## 常用請求方法
@@ -146,5 +148,16 @@ export default {
       console.log(err)
     }
   },
+}
+```
+
+### 默認設定檔
+
+登入後的默認檔設定
+
+```js
+export const userTokenCheck = (token) => {
+  user.defaults.headers.common['Authorization'] = token
+  return user.post('/testToken')
 }
 ```
