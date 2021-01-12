@@ -66,3 +66,7 @@ module.exports = {
 ```
 
 再重新啟動專案，這個時候本地就會是 `https`
+
+## chrome 不信任網站問題
+
+[Nuxt 本地端加載 HTTPS](https://medium.com/@jedy05097952/nuxt-%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8A%A0%E8%BC%89-https-516668bf103)

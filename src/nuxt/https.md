@@ -29,7 +29,7 @@ tags:
   **在專案的路逕上，執行：**
 
   ```
-  mkcert localhost 127.0.0.1
+  mkcert localhost
   ```
 
   產生以 `localhost` 為域名的 **憑證**，會在專案最外層產生：
