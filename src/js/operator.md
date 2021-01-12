@@ -91,6 +91,30 @@ console.log(user.name.first) // NIKI
 console.log(newUser.name.first) // NIKI
 ```
 
+:::warning
+**第一層是傳值**，**第二層是傳值**!! 這點很重要!!
+
+```js
+let data = [1, 2, 3, 4]
+let data2 = [data]
+
+data2 === data // false
+```
+
+```js
+let data = [
+  { id: 1, name: 'nico' },
+  { id: 2, name: 'NIKE' },
+  { id: 3, name: 'NIKI' },
+]
+let newData = [...data]
+
+data === newData // false
+data[0] === newData[0] // true
+```
+
+:::
+
 ## 組合功能
 
 無擴散的語法，使用現有陣列作為它的一個部分創建一個新的數組，數組文本語法不再足夠和命令性代碼必須使用的組合來代替 push()，splice()，concat()等。隨著擴展語法此變得更加簡潔的：
