@@ -1,6 +1,6 @@
 ---
 title: 本地端 https
-date: 2020-12-21
+date: 2020-01-12
 sidebar: 'auto'
 categories:
   - vue
@@ -32,13 +32,16 @@ tags:
   mkcert localhost 127.0.0.1
   ```
 
-  產生以 `localhost` 為域名的 **憑證**，會在專案最外層產生：`localhost-key.pem` 與 `localhost.pem`
+  產生以 `localhost` 為域名的 **憑證**，會在專案最外層產生：
+
+  - `localhost-key.pem`
+  - `localhost.pem`
 
 ## 掛載入 nuxt 專案
 
 在 `nuxt.config.js` 內新增方法，如下：(意思就是將為 `server` 內的兩個檔案為憑證)
 
-```js
+```js {5-10}
 import path from 'path'
 import fs from 'fs'
 

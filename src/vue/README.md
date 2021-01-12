@@ -13,5 +13,5 @@ title: INDEX
 | [屬性綁定](./attr.md)                  | [導航守衛 Guards](./router-guards.md)          | --                            |
 | [轉場](./transition.md)                | [路由信息 meta](./router-meta)                 | --                            |
 | [v-model](./vmodel.md)                 | [滾動至頂](./router-scrolltotop.md)            | --                            |
-| --                                     | [元件載入 chunk](./router_component_import.md) | --                            |
+| [本地 https](./https.md)               | [元件載入 chunk](./router_component_import.md) | --                            |
 | --                                     | [解析目前 URL](./router_resolve.md)            | --                            |
