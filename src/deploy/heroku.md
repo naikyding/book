@@ -27,17 +27,23 @@ heroku 是一個雲端平台，給你用來部屬 **動態程式語言** 的平�
 
 ## NUXT
 
-### 創建的 **heroku** app
+### 創建的 **heroku** app (二擇一)
 
-在專案內：
+- heroku 創造：
 
-```bash
-heroku create <yourAppName>
-```
+  - [Create new app](https://dashboard.heroku.com/apps)
+  - `heroku login`
+  - `heroku git:remote -a nuxt-deploy-heroku` 連結 heroku git
+
+- 在專案內創造：
+
+  ```bash
+  heroku create <yourAppName>
+  ```
 
 創建完成，會回覆一個 [heroku.com](http://heroku.com) 的 url ，可以看到你的 app 所在的地方。
 
-或者，你也可以輸入 `open heroku` 會自動開始 app 的 link。
+或者，你也可以輸入 `heroku open` 會自動開始 app 的 link。
 
 ---
 
