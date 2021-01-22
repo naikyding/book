@@ -119,7 +119,7 @@ web: nuxt start
 
   就會出現，目前的列表：
 
-  ![HEROKU%20NUXT%20PROJECT%2048c53277ea4b444387406f8b94c6f281/_2021-01-20_1.29.32.png](HEROKU%20NUXT%20PROJECT%2048c53277ea4b444387406f8b94c6f281/_2021-01-20_1.29.32.png)
+  <img :src="$withBase('/img/herokuPendding.png')" >
 
   第一行將是您當前正在運行的構建，第一列是構建 ID。
 

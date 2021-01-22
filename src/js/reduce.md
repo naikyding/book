@@ -1,6 +1,6 @@
 ---
 title: 陣列累加 reduce
-date: 2020-01-13
+date: 2021-01-13
 sidebar: 'auto'
 categories:
   - js

@@ -1,6 +1,6 @@
 ---
 title: NUXT CROS 請求代理
-date: 2020-01-08
+date: 2021-01-08
 sidebar: 'auto'
 categories:
   - vue
