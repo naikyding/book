@@ -16,7 +16,10 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon.png"}],
+    [
+      'link',
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon.png' },
+    ],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     [
@@ -66,6 +69,10 @@ module.exports = {
       {
         text: 'NUXT',
         link: '/nuxt/',
+      },
+      {
+        text: 'NODE',
+        link: '/node/',
       },
       {
         text: 'NPM',
