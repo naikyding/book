@@ -12,6 +12,20 @@ tags:
   - 容器
 ---
 
+---
+
+[名詞說明](./docker_info.md)
+
+---
+
+[鏡像操作](./image.md)
+
+---
+
+[容器操作](./container.md)
+
+---
+
 Docker 是個輕量級的虛擬化技術，底層使用 cgroup、chroot、namespace 實作，可以把你的應用程式連同環境一起打包，部屬的時候就不用再擔心環境的問題。
 
 ## 說明
@@ -24,13 +38,3 @@ Docker 是個輕量級的虛擬化技術，底層使用 cgroup、chroot、namesp
 
 - 安裝 [Docker](https://docs.docker.com/install/)
 - 確認 docker 版號 `docker version`
-
-## [名詞說明](./docker_info.md)
-
----
-
-## [鏡像操作](./image.md)
-
----
-
-## [容器操作](./container.md)
