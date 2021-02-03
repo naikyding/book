@@ -14,4 +14,4 @@ title: INDEX
 | [轉場](./transition.md)                | [路由信息 meta](./router-meta)                 | --                            |
 | [v-model](./vmodel.md)                 | [滾動至頂](./router-scrolltotop.md)            | --                            |
 | [本地 https](./https.md)               | [元件載入 chunk](./router_component_import.md) | --                            |
-| --                                     | [解析目前 URL](./router_resolve.md)            | --                            |
+| [vue-test-utils](./testUtils.md)       | [解析目前 URL](./router_resolve.md)            | --                            |
