@@ -74,3 +74,24 @@ it('擊點後，新增 h2 class', async () => {
   expect(wrapper.find('#h2Id').attributes('class')).toBe('red')
 })
 ```
+
+### props 是否如預期傳入
+
+`mount`、`shaollMount`  在形成包裏器時，第二參數為 `props` 的資料設置。
+
+```js {4-9,12}
+import UserFrom from '@/components/UserFrom'
+
+describe('這是組件的測試', () => {
+  it('UserFrom 傳入的參數是否符合按鈕的文字', () => {
+    const wrapperUserFrom = mount(UserFrom, {
+      propsData: {
+        text: '送出', // props 的資料 key & value
+      },
+    })
+
+    const button = wrapperUserFrom.find('button')
+    expect(button.text()).toBe('送出') // 按鈕上面的文字是否為 送出
+  })
+})
+```
