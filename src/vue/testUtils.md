@@ -44,14 +44,27 @@ tags:
 
 在此是寫入測式的區塊描述， describe 內可以寫入多個包含 it 的測試用例。
 
-### `it` 測試項目
+### `it` 測試項目(斷言)
 
-`it` 是真正運行測試的函式，第一個參數是 測試的描述、第二個參數是函式，裡面放著要測試的內容。
+`it` 是真正運行測試的函式，第一個參數是 **測試的描述** 、第二個參數是 **函式**，裡面放著要測試的內容。
 
-```js
+```js {2-4}
 describe('測試標題or範圍的描述', () => {
   it('測試內容', (done) => {
     // 進行測試
+  })
+})
+```
+
+### `expect` 預期的內容
+
+這是在斷言裡的預期，當 `expect` 出現不符合時，即會跳出 fail!
+這是用來判斷，這個斷言是否成立的關鍵!
+
+```js {3}
+describe('測試標題or範圍的描述', () => {
+  it('測試內容', (done) => {
+    expect().toBe() // 預期與實際輸出是否相符?
   })
 })
 ```
@@ -75,24 +88,4 @@ describe('測試標題or範圍的描述', () => {
 
 一個包裝渲染後的模組，可以通過它來訪問元件內部的實例。
 
-**`wrapper`的操作：**
-
-- `.vm` 訪問 vue 實例
-- `.setData()` 操作組件資料(state)
-- `exists()` 判斷是否存在
-
-  ```js
-  expect(wrapper.exists()).to.equal(true)
-  ```
-
-- `is()` 判斷 `wrapper` dom 節點 或是 html 字符串
-
-  ```jsx
-  expect(wrapper.is('div')).toBe(true)
-  ```
-
-- `text()` 文字內容
-
-  ```jsx
-  expect(wrapper.find('.test').text()).to.equal('bar')
-  ```
+## [Wrapper 操作方法](./wrapperApi.md)
