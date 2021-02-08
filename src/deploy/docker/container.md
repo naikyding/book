@@ -45,3 +45,17 @@ Hello world
   :::
 
 ### 啟動已終止的容器 `docker container start`
+
+### 進入容器 `docker exec`
+
+是 Docker 內建的命令。下面示範如何使用該命令
+
+```bash
+docker exec -it vuecli4 /bin/bash/
+
+docker exec -it vuecli4 bash   # 也行
+```
+
+進入 `vuecli4`容器 (正在運行的容器)，使用 `bash` 命令操作
+
+### 退出容器 `exit`

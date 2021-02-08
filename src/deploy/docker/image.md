@@ -38,6 +38,17 @@ docker image rm [选项] <镜像1> [<镜像2> ...]
 docker rmi [image id] # 簡寫
 ```
 
+### 建立 `image` (打包)
+
+```bash
+docker image build -t [鏡像名稱]:[版本號] .
+
+docker build -t [鏡像名稱]:[版本號] . # 簡寫
+```
+
+- `-t` 標籤 名稱:版本號
+- `.` 當前目錄建立 (非常重要，一定要加上)
+
 ### 運行容器命令
 
 ```bash
@@ -50,3 +61,11 @@ docker run node
 - `-rm`：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 `docker rm`。我们这里只是随便执行个命令，看看结果，不需要排障和保留结果，因此使用 `-rm` 可以避免浪费空间。
 - `ubuntu:18.04`：这是指用 `ubuntu:18.04` 镜像为基础来启动容器。
 - `bash`：放在镜像名后的是 **命令**，这里我们希望有个交互式 Shell，因此用的是 `bash`。
+
+- `-d` 在背景運行容器且 show 出 container id。
+  (Run container in background and print container ID)
+
+- `-p` 將 `container` 的端口與外部接上
+  (Publish a container's port(s) to the host)
+
+- `-v` 標記也可以從主機掛載單個檔案到容器中

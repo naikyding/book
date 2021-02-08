@@ -10,3 +10,4 @@ title: INDEX
 | -    | [檔名忽略大小寫](./ignorecase.md)                                | \$1  |
 | -    | [remote 遠端回復版本](./reset.md)                                | \$1  |
 | -    | [cherry-pick 選擇合拼 某個支線的 某個 commit ](./cherry-pick.md) | \$1  |
+| -    | [GIT 問題](./debug.md)                                           | \$1  |
