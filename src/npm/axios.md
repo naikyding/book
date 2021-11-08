@@ -14,6 +14,8 @@ tags:
 
 ## 常用請求方法
 
+---
+
 ```js
 axios.get(url[, config])
 axios.delete(url[, config])

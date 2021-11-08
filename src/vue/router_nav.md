@@ -143,3 +143,4 @@ const router = new VueRouter({
 :::tip
 “别名”的功能让你可以自由地将 UI 结构映射到任意的 URL，而不是受限于配置的嵌套路由结构。
 :::
+
